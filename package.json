@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "serve timer -p 9090",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "dev": "start-server-and-test start http://localhost:9090 cy:open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,7 +17,10 @@
     "@playwright/test": "^1.55.1",
     "@types/node": "^24.6.0",
     "cypress": "^15.3.0",
+    "http-static": "^0.1.1",
     "prettier": "^3.6.2",
+    "serve": "^14.2.5",
+    "start-server-and-test": "^2.1.2",
     "typescript": "^5.9.2"
   }
 }
