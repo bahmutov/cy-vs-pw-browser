@@ -9,7 +9,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "start-server-and-test start http://localhost:9090 cy:open",
-    "pw:open": "playwright test --ui",
+    "pw:open": "playwright test --ui --debug",
     "pw:dev": "start-server-and-test start http://localhost:9090 pw:open"
   },
   "keywords": [],

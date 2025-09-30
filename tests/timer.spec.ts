@@ -4,6 +4,7 @@ test.use({ baseURL: 'http://localhost:9090' })
 
 test('counts seconds', async ({ page }) => {
   await page.goto('/')
+  // await page.pause()
   const timer = page.locator('#timer')
   await expect(timer).toHaveText('0')
   await expect(timer).toHaveText('1')
