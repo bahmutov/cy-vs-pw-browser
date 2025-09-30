@@ -8,7 +8,9 @@
     "start": "serve timer -p 9090",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "dev": "start-server-and-test start http://localhost:9090 cy:open"
+    "dev": "start-server-and-test start http://localhost:9090 cy:open",
+    "pw:open": "playwright test --ui",
+    "pw:dev": "start-server-and-test start http://localhost:9090 pw:open"
   },
   "keywords": [],
   "author": "",
