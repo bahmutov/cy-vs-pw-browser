@@ -1,4 +1,12 @@
 it('cypress demo test', () => {
   cy.visit('/')
-  // cy.get('.header-container .select-button').click()
+  cy.get('body').should('have.class', 'nb-theme-default')
+  cy.get('.header-container .select-button').click()
+  cy.get('nb-option-list')
+    .find('nb-option')
+    .should('have.length', 4)
+    .contains('nb-option', 'Cosmic')
+    .should('not.have.class', 'selected')
+    .click()
+  cy.get('body').should('have.class', 'nb-theme-cosmic')
 })
